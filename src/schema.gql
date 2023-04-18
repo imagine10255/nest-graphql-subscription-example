@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type DashboardOSInfo {
+  cpuCount: Int!
+  memoryTotal: Int!
+  gcHeapStats: Int!
+}
+
+type MyComment {
+  id: String!
+  content: String!
+}
+
+type Query {
+  """取得系統資訊"""
+  dashboardOSInfo: DashboardOSInfo!
+}
+
+type Mutation {
+  addComment: MyComment!
+}
+
+type Subscription {
+  pong: MyComment!
+}

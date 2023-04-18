@@ -1,0 +1,30 @@
+# Goods that don't need to be in a Docker image.
+# Anything not used by the build system should go here.
+# (可避免 dockerfile 中 COPY 到不需要的檔案, 導致Image變大)
+Dockerfile
+.dockerignore
+.gitignore
+.git
+.storybook
+.nginx
+README.md
+CHANGELOG.md
+
+# Artifacts that will be built during image creation.
+# This should contain all files created during `npm run build`.
+build
+node_modules
+storage
+docs
+migration
+
+# Environment (contains sensitive data)
+.env
+
+# Files not required for production
+.editorconfig
+tslint.json
+nodemon.json
+
+ormlogs.log
+.idea
