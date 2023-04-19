@@ -36,5 +36,6 @@ export class ResponseInterceptor<T> implements NestInterceptor<T, Response<T>> {
         } else if (graphqlRequest) {
             return next.handle().pipe(tap());
         }
+        return next.handle();
     }
 }

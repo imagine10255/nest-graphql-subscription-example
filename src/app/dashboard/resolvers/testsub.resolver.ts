@@ -25,7 +25,7 @@ export class TestsubResolvers {
     }
 
     @Subscription((returns) => MyComment)
-    pong({name: PONG_EVENT_NAME}) {
+    pong() {
         return pubSub.asyncIterator(PONG_EVENT_NAME);
     }
 }
