@@ -5,7 +5,6 @@ import { join } from 'path';
 
 // Config
 import {ResponseInterceptor} from 'common/interceptors/response.interceoptor';
-import {AllExceptionsFilter} from 'common/filters/all-exceptions.filter';
 
 // Modules
 import {DashboardModule} from 'app/main/dashboard/dashboard.module';
@@ -56,7 +55,6 @@ import {ConfigModule} from '@nestjs/config';
     controllers: [],
     providers: [
         {provide: APP_INTERCEPTOR, useClass: ResponseInterceptor},
-        {provide: APP_FILTER, useClass: AllExceptionsFilter},
     ],
 })
 export class AppModule {
