@@ -2,9 +2,6 @@ import {Injectable, NestInterceptor, ExecutionContext, CallHandler, RequestTimeo
 
 import {catchError, Observable, throwError, TimeoutError} from 'rxjs';
 import {map, tap} from 'rxjs/operators';
-import * as dayjs from 'dayjs';
-import {QueryFailedError} from 'typeorm';
-import CatchInfoException from '../exception/catchInfo.exception';
 import { GqlExecutionContext } from '@nestjs/graphql';
 
 interface Response<T> {
