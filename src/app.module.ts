@@ -7,7 +7,7 @@ import { join } from 'path';
 import {ResponseInterceptor} from 'common/interceptors/response.interceoptor';
 
 // Modules
-import {DashboardModule} from 'app/main/dashboard/dashboard.module';
+import {DashboardModule} from 'app/dashboard/dashboard.module';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import {GraphQLError } from 'graphql';
@@ -16,10 +16,7 @@ import {ConfigModule} from '@nestjs/config';
 
 @Module({
     imports: [
-        ConfigModule.forRoot({
-            isGlobal: true,
-            load: [],
-        }),
+        ConfigModule.forRoot({isGlobal: true, load: []}),
         GraphQLModule.forRoot<ApolloDriverConfig>({
             driver: ApolloDriver,
             debug: true,
