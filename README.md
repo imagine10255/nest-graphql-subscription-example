@@ -18,6 +18,25 @@ $ yarn dev
 # open http://localhost:8080/graphql
 ```
 
+## Try DSL
+```graphql
+subscription Subscription {
+    subscriptionComment {
+        id
+        content
+    }
+}
+
+mutation Trigger {
+  addComment {
+    id
+    content
+  }
+}
+
+```
+
+
 ## QA
 ```typescript
 {"message": "server must support graphql-ws or subscriptions-transport-ws protocol"}

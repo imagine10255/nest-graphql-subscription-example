@@ -3,12 +3,9 @@ import {Module} from '@nestjs/common';
 // Service
 import {DashboardService} from './services/dashboard.service';
 
-// Controller
+// Resolver
 import DashboardResolver from "./resolvers/dashboard.resolver";
-import {TestsubResolvers} from './resolvers/testsub.resolver';
-
-// Modules
-
+import CommentResolvers from './resolvers/comment.resolver';
 
 
 @Module({
@@ -16,9 +13,9 @@ import {TestsubResolvers} from './resolvers/testsub.resolver';
     providers: [
         DashboardService,
         DashboardResolver,
-        TestsubResolvers,
+        CommentResolvers,
     ],
-    exports: [DashboardService],
+    exports: [],
 })
 export class DashboardModule {}
 

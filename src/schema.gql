@@ -8,7 +8,7 @@ type DashboardOSInfo {
   gcHeapStats: Int!
 }
 
-type MyComment {
+type Comment {
   id: String!
   content: String!
 }
@@ -19,9 +19,9 @@ type Query {
 }
 
 type Mutation {
-  addComment: MyComment!
+  addComment: Comment!
 }
 
 type Subscription {
-  pong: MyComment!
+  subscriptionComment: Comment!
 }
